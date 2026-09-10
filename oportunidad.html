@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oportunidad | OportunidadesPY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">OportunidadesPY</a>
+    </header>
+
+    <main>
+        <article>
+            <header>
+                <p>Oportunidad de ejemplo ficticia</p>
+                <h1>Beca Internacional Futuro Global</h1>
+                <p>Organización Ficticia de Ejemplo</p>
+            </header>
+
+            <dl>
+                <dt>Categoría</dt>
+                <dd>Becas</dd>
+
+                <dt>Edad</dt>
+                <dd>16 a 22 años</dd>
+
+                <dt>Elegibilidad</dt>
+                <dd>Estudiantes paraguayos</dd>
+
+                <dt>Requisitos</dt>
+                <dd>Ser estudiante, presentar una carta de motivación y contar con buen rendimiento académico.</dd>
+
+                <dt>Beneficios</dt>
+                <dd>Apoyo económico ficticio, experiencia internacional y acompañamiento académico.</dd>
+
+                <dt>Costo</dt>
+                <dd>Sin costo</dd>
+
+                <dt>Modalidad</dt>
+                <dd>Presencial</dd>
+
+                <dt>Ubicación</dt>
+                <dd>País ficticio</dd>
+
+                <dt>Fecha límite</dt>
+                <dd>31 de diciembre de 2099</dd>
+
+                <dt>Estado de la postulación</dt>
+                <dd>Postulación abierta</dd>
+            </dl>
+
+            <section aria-labelledby="descripcion-titulo">
+                <h2 id="descripcion-titulo">Descripción</h2>
+                <p>Esta oportunidad ficticia ofrece apoyo para jóvenes que desean continuar sus estudios en otro país.</p>
+            </section>
+
+            <a href="#" target="_blank" rel="noopener noreferrer">Ir al sitio oficial</a>
+        </article>
+
+        <a href="index.html#explorar">Volver a explorar oportunidades</a>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        const parametrosURL = new URLSearchParams(window.location.search);
+        const idOportunidad = parametrosURL.get("id");
+        const oportunidadEncontrada = oportunidades.find(function (oportunidad) {
+            return oportunidad.id === Number(idOportunidad);
+        });
+
+        const articuloOportunidad = document.querySelector("main > article");
+
+        if (!oportunidadEncontrada) {
+            articuloOportunidad.innerHTML = `
+                <h1>Oportunidad no encontrada</h1>
+                <p>No existe una oportunidad asociada al ID indicado.</p>
+            `;
+        } else {
+            const encabezadoOportunidad = articuloOportunidad.querySelector("header");
+            const parrafosEncabezado = encabezadoOportunidad.querySelectorAll("p");
+            const datosOportunidad = articuloOportunidad.querySelectorAll("dl dd");
+
+            parrafosEncabezado[0].textContent = `Oportunidad de ${oportunidadEncontrada.categoria}`;
+            encabezadoOportunidad.querySelector("h1").textContent = oportunidadEncontrada.titulo;
+            parrafosEncabezado[1].textContent = oportunidadEncontrada.organizacion;
+
+            datosOportunidad[0].textContent = oportunidadEncontrada.categoria;
+            datosOportunidad[1].textContent = oportunidadEncontrada.edad;
+            datosOportunidad[2].textContent = oportunidadEncontrada.elegibilidad;
+            datosOportunidad[3].textContent = oportunidadEncontrada.requisitos;
+            datosOportunidad[4].textContent = oportunidadEncontrada.beneficios;
+            datosOportunidad[5].textContent = oportunidadEncontrada.costo;
+            datosOportunidad[6].textContent = oportunidadEncontrada.modalidad;
+            datosOportunidad[7].textContent = oportunidadEncontrada.ubicacion;
+            datosOportunidad[8].textContent = oportunidadEncontrada.fechaLimite;
+            datosOportunidad[9].textContent = estaVencida(oportunidadEncontrada.fechaLimiteISO)
+                ? "Postulación cerrada"
+                : "Postulación abierta";
+
+            articuloOportunidad.querySelector("section p").textContent = oportunidadEncontrada.descripcion;
+            articuloOportunidad.querySelector("article > a").href = oportunidadEncontrada.enlace;
+        }
+    </script>
+</body>
+</html>
