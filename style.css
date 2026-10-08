@@ -326,6 +326,7 @@ main > section#como-funciona {
     gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     margin-top: 4rem;
+    text-align: center;
 }
 
 main > section#como-funciona > h2 {
@@ -511,4 +512,256 @@ main > section#como-funciona {
     text-align: center;
     color: #6b7280;
     font-size: 1.1rem;
+}
+.estado-abierta,
+.estado-cerrada {
+	display: inline-block;
+    margin: 0 0 0.5rem;
+	padding: 0.3rem 0.65rem;
+	border-radius: 999px;
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.estado-abierta {
+	background-color: #dcfce7;
+	color: #166534;
+}
+
+.estado-cerrada {
+	background-color: #fee2e2;
+	color: #991b1b;
+}
+
+.oportunidad-cerrada {
+	opacity: 0.75;
+}
+.organizacion {
+	margin-bottom: 0.25rem;
+}
+
+#destacadas article {
+	height: 100%;
+}
+
+#destacadas article a {
+	margin-top: auto;
+}
+
+#como-funciona article p {
+	max-width: 380px;
+	margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+	#como-funciona article {
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+
+#categorias article {
+	text-align: center;
+	box-sizing: border-box;
+}
+
+#categorias article h3 {
+	margin-bottom: 0.75rem;
+}
+
+#categorias article p {
+	margin-bottom: 1rem;
+}
+
+#categorias article a {
+	display: inline-block;
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    body {
+        padding: 1.25rem;
+    }
+
+    body > header {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        gap: 0.75rem 1rem;
+    }
+
+    main > section#categorias,
+    #categorias {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    main > section#destacadas,
+    #destacadas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    main > section#como-funciona,
+    #como-funciona {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    main > section#explorar form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    body {
+        padding: 0.75rem;
+    }
+
+    body > header {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    header > a:first-child,
+    header > a:last-child {
+        align-self: center;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    header nav {
+        max-width: 100%;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        gap: 0.25rem 0.75rem;
+        justify-content: center;
+    }
+
+    header nav a,
+    footer nav a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+    }
+
+    main > section:first-child {
+        margin-top: 1rem;
+        padding: 2.5rem 1rem;
+    }
+
+    main > section:first-child h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+    }
+
+    main > section#categorias,
+    #categorias,
+    main > section#destacadas,
+    #destacadas,
+    main > section#como-funciona,
+    #como-funciona {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+        margin-top: 2.5rem;
+    }
+
+    main > section#categorias > article,
+    main > section#como-funciona > article {
+        min-width: 0;
+        padding: 1.25rem;
+    }
+
+    main > section#categorias > article a {
+        min-height: 44px;
+        padding-block: 0.5rem;
+    }
+
+    main > section#destacadas > article {
+        min-height: 22rem;
+        padding: 1.25rem;
+    }
+
+    main > section#destacadas > article > a,
+    main > section#explorar form > button,
+    main > section#colaborar > a,
+    main > section:first-child > a {
+        min-height: 44px;
+    }
+
+    main > section#explorar,
+    main > section#colaborar,
+    main > section#sobre-el-proyecto {
+        margin-top: 2.5rem;
+        padding: 1.5rem 1rem;
+    }
+
+    main > section#explorar form {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    main > section#explorar form > div,
+    main > section#explorar input,
+    main > section#explorar select,
+    main > section#explorar form > button {
+        min-width: 0;
+        width: 100%;
+    }
+
+    main > section#destacadas > article h3,
+    main > section#categorias h3,
+    main > section#como-funciona h3,
+    body > main > article > header h1,
+    body > main > article > dl dd {
+        overflow-wrap: anywhere;
+    }
+
+    body > main > article > header h1 {
+        font-size: 2rem;
+    }
+
+    body > main > article > dl {
+        gap: 0.35rem;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    body > main > article > dl dd {
+        margin-bottom: 0.75rem;
+    }
+
+    #destacadas > p {
+        padding: 1rem 0.25rem;
+    }
+
+    footer {
+        gap: 0.85rem;
+        margin-top: 2.5rem;
+        min-width: 0;
+        padding: 1.5rem 1rem;
+    }
+
+    footer nav ul {
+        gap: 0.25rem 0.75rem;
+    }
+
+    main > section,
+    footer,
+    main > article {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
 }

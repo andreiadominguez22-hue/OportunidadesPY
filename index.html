@@ -46,37 +46,37 @@
             <article>
                 <h3>Becas</h3>
                 <p>Oportunidades de apoyo para estudiar y continuar tu formación.</p>
-                <a href="#becas">Ver becas</a>
+                <a href="index.html?categoria=becas#explorar">Ver becas</a>
             </article>
 
             <article>
                 <h3>Concursos</h3>
                 <p>Desafíos para compartir tus ideas, talentos y proyectos.</p>
-                <a href="#concursos">Ver concursos</a>
+                <a href="index.html?categoria=concursos#explorar">Ver concursos</a>
             </article>
 
             <article>
                 <h3>Capacitaciones</h3>
                 <p>Cursos y talleres para aprender nuevas habilidades.</p>
-                <a href="#capacitaciones">Ver capacitaciones</a>
+                <a href="index.html?categoria=capacitaciones#explorar">Ver capacitaciones</a>
             </article>
 
             <article>
                 <h3>Intercambios</h3>
                 <p>Experiencias para conocer otras culturas y ampliar tus horizontes.</p>
-                <a href="#intercambios">Ver intercambios</a>
+                <a href="index.html?categoria=intercambios#explorar">Ver intercambios</a>
             </article>
 
             <article>
                 <h3>Voluntariados</h3>
                 <p>Proyectos para ayudar a tu comunidad y generar impacto.</p>
-                <a href="#voluntariados">Ver voluntariados</a>
+                <a href="index.html?categoria=voluntariados#explorar">Ver voluntariados</a>
             </article>
 
             <article>
                 <h3>Pasantías</h3>
                 <p>Experiencias para acercarte al mundo laboral.</p>
-                <a href="#pasantias">Ver pasantías</a>
+                <a href="index.html?categoria=pasantias#explorar">Ver pasantías</a>
             </article>
         </section>
 
@@ -122,6 +122,24 @@
                         <option value="con-costo">Con costo</option>
                     </select>
                 </div>
+                <div>
+    <label for="estado">Estado</label>
+    <select id="estado" name="estado">
+        <option value="todas">Todas</option>
+        <option value="abiertas">Abiertas</option>
+        <option value="cerradas">Cerradas</option>
+    </select>
+</div>
+
+<div>
+    <label for="ordenar">Ordenar por</label>
+    <select id="ordenar" name="ordenar">
+        <option value="predeterminado">Predeterminado</option>
+        <option value="fecha-proxima">Fecha límite más próxima</option>
+        <option value="fecha-lejana">Fecha límite más lejana</option>
+        <option value="alfabetico">A-Z</option>
+    </select>
+</div>
 
                 <button type="submit">Buscar oportunidades</button>
             </form>
@@ -155,7 +173,7 @@
 
             <p>Organizaciones, instituciones y personas pueden compartir oportunidades que sean útiles para jóvenes paraguayos.</p>
 
-            <a href="#">Quiero compartir una oportunidad</a>
+           <a href="proponer.html">Quiero compartir una oportunidad</a>
         </section>
 
         <section id="sobre-el-proyecto" aria-labelledby="sobre-el-proyecto-titulo">
