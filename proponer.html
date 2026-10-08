@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Proponer oportunidad | OportunidadesPY</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .formulario-seccion {
+            width: min(100% - 2rem, 56rem);
+            margin: 2rem auto;
+        }
+
+        .formulario-seccion > p {
+            max-width: 46rem;
+            margin-bottom: 2rem;
+        }
+
+        .formulario-oportunidad {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .bloque-formulario {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.25rem;
+            margin: 0;
+            padding: 1.5rem;
+            border: 1px solid #dfe5e8;
+            border-radius: 1rem;
+            background-color: #fff;
+        }
+
+        .bloque-formulario legend {
+            padding: 0 0.5rem;
+            font-family: "Poppins", sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .campo-formulario {
+            display: flex;
+            min-width: 0;
+            flex-direction: column;
+            gap: 0.45rem;
+        }
+
+        .campo-formulario--ancho-completo {
+            grid-column: 1 / -1;
+        }
+
+        .campo-formulario input,
+        .campo-formulario select,
+        .campo-formulario textarea {
+            width: 100%;
+            max-width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5d9;
+            border-radius: 0.5rem;
+            font: inherit;
+        }
+
+        .campo-formulario textarea {
+            min-height: 8rem;
+            resize: vertical;
+        }
+
+        .formulario-oportunidad button {
+            justify-self: start;
+        }
+
+        .volver-inicio {
+            display: inline-block;
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 640px) {
+            .formulario-seccion {
+                width: min(100% - 1.5rem, 56rem);
+            }
+
+            .bloque-formulario {
+                grid-template-columns: 1fr;
+                padding: 1.25rem;
+            }
+
+            .campo-formulario--ancho-completo {
+                grid-column: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">OportunidadesPY</a>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#explorar">Explorar</a></li>
+                <li><a href="index.html#categorias">Categorías</a></li>
+                <li><a href="index.html#sobre-el-proyecto">Sobre el proyecto</a></li>
+            </ul>
+        </nav>
+
+        <a href="index.html#explorar">Explorar oportunidades</a>
+    </header>
+
+    <main>
+        <section class="formulario-seccion" aria-labelledby="proponer-titulo">
+            <h1 id="proponer-titulo">¿Conocés una oportunidad para jóvenes?</h1>
+
+            <p>
+                Compartí una oportunidad con nuestra comunidad. La información será revisada
+                antes de publicarse en OportunidadesPY.
+            </p>
+
+            <form class="formulario-oportunidad" action="https://formspree.io/f/mgaveopr" method="post">
+                <fieldset class="bloque-formulario">
+                    <legend>Información de la oportunidad</legend>
+
+                    <div class="campo-formulario">
+                        <label for="nombre-oportunidad">Nombre de la oportunidad</label>
+                        <input type="text" id="nombre-oportunidad" name="nombre-oportunidad" required>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="organizacion">Organización o institución</label>
+                        <input type="text" id="organizacion" name="organizacion" required>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="categoria">Categoría</label>
+                        <select id="categoria" name="categoria" required>
+                            <option value="">Seleccioná una categoría</option>
+                            <option value="becas">Becas</option>
+                            <option value="concursos">Concursos</option>
+                            <option value="capacitaciones">Capacitaciones</option>
+                            <option value="intercambios">Intercambios</option>
+                            <option value="voluntariados">Voluntariados</option>
+                            <option value="pasantias">Pasantías</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-formulario campo-formulario--ancho-completo">
+                        <label for="descripcion">Descripción</label>
+                        <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset class="bloque-formulario">
+                    <legend>Características</legend>
+
+                    <div class="campo-formulario">
+                        <label for="publico-objetivo">Edad o público objetivo</label>
+                        <input type="text" id="publico-objetivo" name="publico-objetivo" required>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="ubicacion">Ubicación</label>
+                        <input type="text" id="ubicacion" name="ubicacion" required>
+                    </div>
+
+                    <div class="campo-formulario campo-formulario--ancho-completo">
+                        <label for="requisitos">Requisitos</label>
+                        <textarea id="requisitos" name="requisitos" rows="4" required></textarea>
+                    </div>
+
+                    <div class="campo-formulario campo-formulario--ancho-completo">
+                        <label for="beneficios">Beneficios</label>
+                        <textarea id="beneficios" name="beneficios" rows="4" required></textarea>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="costo">Costo</label>
+                        <select id="costo" name="costo" required>
+                            <option value="">Seleccioná una opción</option>
+                            <option value="gratuito">Gratuito</option>
+                            <option value="con-costo">Con costo</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="modalidad">Modalidad</label>
+                        <select id="modalidad" name="modalidad" required>
+                            <option value="">Seleccioná una modalidad</option>
+                            <option value="presencial">Presencial</option>
+                            <option value="online">Online</option>
+                            <option value="hibrida">Híbrida</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="fecha-limite">Fecha límite</label>
+                        <input type="date" id="fecha-limite" name="fecha-limite">
+                    </div>
+                </fieldset>
+
+                <fieldset class="bloque-formulario">
+                    <legend>Postulación</legend>
+
+                    <div class="campo-formulario campo-formulario--ancho-completo">
+                        <label for="enlace-oficial">Enlace oficial</label>
+                        <input type="url" id="enlace-oficial" name="enlace-oficial" placeholder="https://">
+                    </div>
+                </fieldset>
+
+                <fieldset class="bloque-formulario">
+                    <legend>Datos de contacto</legend>
+
+                    <div class="campo-formulario">
+                        <label for="nombre-proponente">Nombre de la persona que propone</label>
+                        <input type="text" id="nombre-proponente" name="nombre-proponente" required>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="correo-contacto">Correo electrónico de contacto</label>
+                        <input type="email" id="correo-contacto" name="correo-contacto" required>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Enviar oportunidad</button>
+            </form>
+
+            <a class="volver-inicio" href="index.html">Volver al inicio</a>
+        </section>
+    </main>
+</body>
+</html>
