@@ -34,11 +34,17 @@ function obtenerFechaLimiteValida(fechaISO) {
 	return fechaLimite.getTime();
 }
 
-function mostrarOportunidades(listaOportunidades = oportunidades) {
-	const seccionDestacadas = document.querySelector("#destacadas");
-	const articulosExistentes = seccionDestacadas.querySelectorAll("article");
+const oportunidadesPorPagina = 6;
+let oportunidadesActuales = [];
+let cantidadOportunidadesVisibles = oportunidadesPorPagina;
 
-	articulosExistentes.forEach(function (articulo) {
+function renderizarOportunidades() {
+	const seccionDestacadas = document.querySelector("#destacadas");
+	if (!seccionDestacadas) {
+		return;
+	}
+
+	seccionDestacadas.querySelectorAll("article").forEach(function (articulo) {
 		articulo.remove();
 	});
 
@@ -47,7 +53,12 @@ function mostrarOportunidades(listaOportunidades = oportunidades) {
 		mensajeAnterior.remove();
 	}
 
-	if (listaOportunidades.length === 0) {
+	const botonAnterior = seccionDestacadas.querySelector(".ver-mas-oportunidades");
+	if (botonAnterior) {
+		botonAnterior.remove();
+	}
+
+	if (oportunidadesActuales.length === 0) {
 		const mensajeSinResultados = document.createElement("p");
 		mensajeSinResultados.classList.add("mensaje-sin-resultados");
 		mensajeSinResultados.textContent = "No encontramos oportunidades con esos criterios. Probá cambiar los filtros o la búsqueda.";
@@ -55,19 +66,19 @@ function mostrarOportunidades(listaOportunidades = oportunidades) {
 		return;
 	}
 
-	listaOportunidades.forEach(function (oportunidad) {
+	oportunidadesActuales.slice(0, cantidadOportunidadesVisibles).forEach(function (oportunidad) {
 		const articulo = document.createElement("article");
 		const oportunidadEstaVencida = estaVencida(oportunidad.fechaLimiteISO);
 
-const mensajeEstado = oportunidadEstaVencida
-	? "<small class=\"estado-cerrada\">Postulación cerrada</small>"
-	: "<small class=\"estado-abierta\">Postulación abierta</small>";
+		const mensajeEstado = oportunidadEstaVencida
+			? "<small class=\"estado-cerrada\">Postulación cerrada</small>"
+			: "<small class=\"estado-abierta\">Postulación abierta</small>";
 
-if (oportunidadEstaVencida) {
-	articulo.classList.add("oportunidad-cerrada");
-} else {
-	articulo.classList.add("oportunidad-abierta");
-}
+		if (oportunidadEstaVencida) {
+			articulo.classList.add("oportunidad-cerrada");
+		} else {
+			articulo.classList.add("oportunidad-abierta");
+		}
 
 		articulo.innerHTML = `
 			<span class="categoria">${oportunidad.categoria}</span>
@@ -81,6 +92,27 @@ if (oportunidadEstaVencida) {
 
 		seccionDestacadas.appendChild(articulo);
 	});
+
+	if (cantidadOportunidadesVisibles < oportunidadesActuales.length) {
+		const botonVerMas = document.createElement("button");
+		botonVerMas.type = "button";
+		botonVerMas.classList.add("ver-mas-oportunidades");
+		botonVerMas.textContent = "Ver más oportunidades";
+		botonVerMas.addEventListener("click", function () {
+			cantidadOportunidadesVisibles = Math.min(
+				cantidadOportunidadesVisibles + oportunidadesPorPagina,
+				oportunidadesActuales.length
+			);
+			renderizarOportunidades();
+		});
+		seccionDestacadas.appendChild(botonVerMas);
+	}
+}
+
+function mostrarOportunidades(listaOportunidades = oportunidades) {
+	oportunidadesActuales = listaOportunidades.slice();
+	cantidadOportunidadesVisibles = oportunidadesPorPagina;
+	renderizarOportunidades();
 }
 
 const formularioBusqueda = document.querySelector("#explorar form");
