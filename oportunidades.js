@@ -19,23 +19,43 @@ const oportunidades = [
 	enlace: "https://py.uwc.org/como-aplicar/"
 },
 	
-	{
+
+{
 	id: 2,
-	titulo: "Premio Emprendedor del Año 2026",
-	organizacion: "Premio Emprendedor del Año",
-	categoria: "Concursos",
-	edad: "18 años o más",
-	elegibilidad: "Personas de 18 años o más con un emprendimiento lícito radicado en Paraguay o con una idea incluida en las categorías habilitadas. La categoría Emprendimiento Juvenil está dirigida a jóvenes de 18 a 29 años.",
-	requisitos: "Completar el formulario y perfil del emprendimiento. Se requiere cédula vigente y, según la categoría y situación del emprendimiento, RUC u otra documentación establecida en las bases.",
-	beneficios: "Participación en un programa de fortalecimiento, evaluación y posibilidad de obtener reconocimiento y premios según la categoría.",
+	titulo: "Proyecto de Compostaje y Manejo de Residuos Orgánicos",
+	organizacion: "Proyecto Comunitario Emboscada / Iniciativa Independiente",
+	categoria: "Voluntariados",
+	edad: "Jóvenes de 17 a 30 años y personas interesadas en el medio ambiente y el trabajo comunitario.",
+	elegibilidad: "Personas interesadas en la sustentabilidad y el trabajo comunitario. Se puede colaborar presencialmente en Emboscada o virtualmente en comunicación y gestión de redes.",
+	requisitos: "Compromiso, interés por el cuidado del medio ambiente, disposición para aportar ideas y disponibilidad de algunas horas semanales. Para tareas presenciales, posibilidad de colaborar en la zona. No se requiere experiencia previa.",
+	beneficios: "Experiencia práctica en proyectos de impacto ambiental y desarrollo comunitario. Aprendizaje sobre compostaje y gestión de residuos, desarrollo de liderazgo y trabajo colaborativo, y certificado de participación al finalizar el período de voluntariado.",
 	costo: "Gratuito",
-	modalidad: "Online",
-	ubicacion: "Paraguay",
-	fechaLimite: "11 de octubre de 2026",
-	fechaLimiteISO: "2026-10-11",
-	descripcion: "Convocatoria nacional que busca reconocer, visibilizar e impulsar emprendimientos paraguayos. Cuenta con una categoría específica para emprendimientos liderados por jóvenes de 18 a 29 años.",
-	enlace: "https://premioemprendedor.com.py/"
+	modalidad: "Híbrida",
+	ubicacion: "Emboscada, departamento de Cordillera. Algunas tareas de comunicación y gestión pueden realizarse virtualmente.",
+	fechaLimite: "5 de marzo de 2027 ",
+	fechaLimiteISO: "2027-03-05",
+	descripcion: "Iniciativa comunitaria que busca reducir la acumulación y quema de basura mediante la recolección domiciliaria de residuos orgánicos en baldes, su procesamiento mediante compostaje y la devolución del abono a los vecinos. El proyecto comienza en Emboscada y busca replicarse en otras ciudades. Se buscan voluntarios para colaborar en sustentabilidad, trabajo comunitario, comunicación, redes sociales y logística.",
+	enlace: "https://wa.link/mv7d9x"
 },
+
+{
+	id: 3,
+	titulo: "Becas BECAL para Maestrías Nacionales 2026",
+	organizacion: "Programa Nacional de Becas Carlos Antonio López (BECAL)",
+	categoria: "Becas",
+	edad: "Consultar criterios de elegibilidad en las bases oficiales.",
+	elegibilidad: "Personas que cumplan los requisitos de la convocatoria para maestrías académicas en Paraguay, según la modalidad y el sector correspondiente.",
+	requisitos: "Cumplir los requisitos académicos, documentales y de elegibilidad establecidos en la Guía de Bases y Condiciones. Consultar las condiciones específicas para postulantes del sector público y privado.",
+	beneficios: "Financiamiento de becas para cursar programas de maestría nacional, conforme a las condiciones y los beneficios establecidos en las bases oficiales.",
+	costo: "Consultar bases oficiales",
+	modalidad: "Presencial",
+	ubicacion: "Paraguay",
+	fechaLimite: "18 de diciembre de 2026, 15:00",
+	fechaLimiteISO: "2026-12-18",
+	descripcion: "Convocatoria de BECAL para apoyar la formación de capital humano avanzado mediante estudios de maestría en instituciones de educación superior de Paraguay. Los postulantes deben revisar las líneas disponibles y las condiciones específicas de su sector.",
+	enlace: "https://becal.gov.py/posgrados-en-paraguay-autogestionadas/"
+},
+
 
 	{
 		id: 4,
@@ -104,5 +124,131 @@ const oportunidades = [
 		fechaLimiteISO: null,
 		descripcion: "Curso presencial de Robótica VEX orientado a personas desde los 15 años. Las clases incluyen diseño, construcción y programación de robots.",
 		enlace: "https://www.snpp.edu.py/"
-	}
+	},
+	
+{
+	id: 8,
+	titulo: "Becas BECAL para Doctorados Nacionales 2026",
+	organizacion: "Programa Nacional de Becas Carlos Antonio López (BECAL)",
+	categoria: "Becas",
+	edad: "Consultar criterios de elegibilidad en las bases oficiales.",
+	elegibilidad: "Personas que cumplan los requisitos académicos y de admisión para cursar un doctorado en Paraguay, conforme a las áreas y condiciones de la convocatoria.",
+	requisitos: "Cumplir los requisitos de titulación, admisión universitaria, programa académico y documentación establecidos en la Guía de Bases y Condiciones. Revisar los criterios específicos de la convocatoria.",
+	beneficios: "Financiamiento de becas para estudios doctorales nacionales, de acuerdo con las condiciones aprobadas por BECAL.",
+	costo: "Consultar bases oficiales",
+	modalidad: "Presencial",
+	ubicacion: "Paraguay",
+	fechaLimite: "18 de diciembre de 2026, 15:00",
+	fechaLimiteISO: "2026-12-18",
+	descripcion: "Convocatoria para la formación doctoral en instituciones paraguayas. Busca fortalecer la investigación, la docencia y la generación de conocimiento en áreas relevantes para el desarrollo nacional. Consultar las bases para verificar los programas elegibles y el financiamiento.",
+	enlace: "https://becal.gov.py/posgrados-en-paraguay-autogestionadas/"
+},
+
+{
+	id: 9,
+	titulo: "Becas BECAL para Especializaciones Nacionales 2026",
+	organizacion: "Programa Nacional de Becas Carlos Antonio López (BECAL)",
+	categoria: "Becas",
+	edad: "Consultar criterios de elegibilidad en las bases oficiales.",
+	elegibilidad: "Trabajadores elegibles del sector público y privado que cumplan los requisitos de la convocatoria. Algunas modalidades exigen al menos dos años de antigüedad laboral y vinculación de los estudios con el trabajo desempeñado.",
+	requisitos: "Cumplir los requisitos de experiencia laboral, situación profesional, relación del programa con las funciones desempeñadas y documentación exigida en las bases. Las condiciones varían según la modalidad.",
+	beneficios: "Apoyo financiero para formación especializada de corta duración, conforme a las condiciones de la convocatoria.",
+	costo: "Consultar bases oficiales",
+	modalidad: "Consultar programa elegido",
+	ubicacion: "Paraguay",
+	fechaLimite: "18 de diciembre de 2026, 15:00",
+	fechaLimiteISO: "2026-12-18",
+	descripcion: "Convocatoria de BECAL destinada a fortalecer las capacidades profesionales mediante programas de especialización nacional. Incluye modalidades para trabajadores del sector público y privado, cada una con criterios específicos de elegibilidad.",
+	enlace: "https://becal.gov.py/especializaciones-nacionales/"
+},
+
+{
+	id: 10,
+	titulo: "Becas para Doctorados en Estados Unidos — BECAL y Comité Paraguay Kansas",
+	organizacion: "BECAL / Comité Paraguay Kansas (CPK)",
+	categoria: "Becas",
+	edad: "Consultar criterios de elegibilidad en las bases oficiales.",
+	elegibilidad: "Personas paraguayas o naturalizadas que posean títulos de grado y maestría y cumplan los requisitos académicos y de admisión del programa doctoral.",
+	requisitos: "Realizar el proceso de postulación del Comité Paraguay Kansas, cumplir los requisitos de admisión de la universidad y presentar la documentación exigida, incluida la carta de admisión definitiva y los certificados académicos requeridos.",
+	beneficios: "Convocatoria de 10 becas. El convenio contempla apoyo específico para la matrícula universitaria (tuition), conforme a las condiciones oficiales.",
+	costo: "Consultar bases oficiales",
+	modalidad: "Presencial",
+	ubicacion: "Estados Unidos",
+	fechaLimite: "5 de febrero de 2027",
+	fechaLimiteISO: "2027-02-05",
+	descripcion: "Convocatoria de BECAL y el Comité Paraguay Kansas para cursar programas de doctorado en Estados Unidos en áreas de conocimiento contempladas por las bases. Los interesados deben contactar al CPK y revisar los requisitos y beneficios antes de postular.",
+	enlace: "https://becal.gov.py/2026/09/21/becal-amplia-plazo-para-postular-a-becas-para-doctorados-en-estados-unidos-en-convenio-con-el-comite-paraguay-kansas/"
+},
+
+{
+	id: 11,
+	titulo: "Guardianes del Patrimonio 2026",
+	organizacion: "Organizadores de Guardianes del Patrimonio",
+	categoria: "Concursos",
+	edad: "Estudiantes de 7 a 18 años.",
+	elegibilidad: "Estudiantes de todo Paraguay que cumplan las condiciones de participación de la convocatoria. Se permite participar individualmente o en equipos.",
+	requisitos: "Cumplir las bases oficiales, completar la inscripción y participar en las actividades de formación y creación del proyecto. Consultar los requisitos técnicos y de participación en la convocatoria.",
+	beneficios: "Capacitación en patrimonio cultural, formación en Minecraft Education, recorridos por el Centro Histórico de Asunción y acompañamiento para desarrollar proyectos creativos. Los finalistas participan en la etapa de premiación.",
+	costo: "Consultar bases oficiales",
+	modalidad: "Híbrida",
+	ubicacion: "Paraguay, con actividades vinculadas al Centro Histórico de Asunción",
+	fechaLimite: "6 de noviembre de 2026",
+	fechaLimiteISO: "2026-11-06",
+	descripcion: "Competencia nacional que invita a estudiantes de 7 a 18 años a investigar y poner en valor el patrimonio del Centro Histórico de Asunción mediante proyectos desarrollados con Minecraft Education. Las capacitaciones ya comenzaron; consultar las condiciones para incorporarse.",
+	enlace: "https://mediosdelestado.gov.py/ip/2026/09/19/guardianes-del-patrimonio-2026-convoca-a-estudiantes-de-todo-el-pais/"
+},
+
+{
+	id: 12,
+	titulo: "Curso de Operador de Ofimática — SNPP",
+	organizacion: "Servicio Nacional de Promoción Profesional (SNPP)",
+	categoria: "Capacitaciones",
+	edad: "Consultar condiciones de inscripción del SNPP.",
+	elegibilidad: "Personas interesadas en desarrollar competencias informáticas, sujetas a las condiciones de inscripción y disponibilidad de cupos.",
+	requisitos: "Consultar requisitos de inscripción en el portal del SNPP. Las clases ya comenzaron, por lo que es necesario confirmar si todavía se aceptan participantes.",
+	beneficios: "Capacitación gratuita en herramientas de ofimática, con una carga horaria anunciada de 120 horas.",
+	costo: "Gratuito",
+	modalidad: "Presencial",
+	ubicacion: "Sede central del SNPP, avenida Molas López 480, esquina Aviadores del Chaco, Asunción",
+	fechaLimite: "Consultar disponibilidad de cupos. Clases hasta el 20 de noviembre de 2026.",
+	fechaLimiteISO: "",
+	descripcion: "Curso de Operador de Ofimática del SNPP con grupos en turnos mañana y noche. Las clases comenzaron el 12 de octubre de 2026. Antes de presentar la oportunidad como disponible, consultar si quedan cupos y si se permite la incorporación tardía.",
+	enlace: "https://www.snpp.edu.py/noticias-snpp/14271-snpp-ofrece-cursos-gratuitos-de-informatica-en-su-sede-central-de-asuncion.html"
+},
+
+{
+	id: 13,
+	titulo: "Curso de Planilla Electrónica Excel Avanzado — SNPP",
+	organizacion: "Servicio Nacional de Promoción Profesional (SNPP)",
+	categoria: "Capacitaciones",
+	edad: "Consultar condiciones de inscripción del SNPP.",
+	elegibilidad: "Personas interesadas en perfeccionar sus conocimientos de planillas electrónicas, sujetas a las condiciones de inscripción y disponibilidad de cupos.",
+	requisitos: "Consultar requisitos de inscripción en el portal del SNPP. Las clases ya comenzaron y la finalización está prevista para el 6 de noviembre de 2026; confirmar si aún es posible incorporarse.",
+	beneficios: "Capacitación gratuita para perfeccionar el manejo de planillas electrónicas utilizadas para organizar, procesar y analizar información.",
+	costo: "Gratuito",
+	modalidad: "Presencial",
+	ubicacion: "Sede central del SNPP, avenida Molas López 480, esquina Aviadores del Chaco, Asunción",
+	fechaLimite: "Consultar disponibilidad de cupos. Clases hasta el 6 de noviembre de 2026.",
+	fechaLimiteISO: "",
+	descripcion: "Curso presencial de Excel Avanzado del SNPP, con clases los lunes, miércoles y viernes de 14:00 a 17:00. Las clases comenzaron el 12 de octubre de 2026. Consultar si existen cupos disponibles y si aceptan nuevas inscripciones.",
+	enlace: "https://www.snpp.edu.py/noticias-snpp/14271-snpp-ofrece-cursos-gratuitos-de-informatica-en-su-sede-central-de-asuncion.html"
+},
+{
+    id: 14,
+    titulo: "Becas de Movilidad Internacional de Grado — UNI 2027",
+    organizacion: "Universidad Nacional de Itapúa (UNI)",
+    categoria: "Becas",
+    edad: "Estudiantes universitarios de grado matriculados en la UNI. No se especifica un límite de edad en las bases.",
+    elegibilidad: "Estudiantes de grado de la Universidad Nacional de Itapúa que hayan cursado al menos el 40% de su carrera, no ocupen un cargo docente y no tengan sanciones disciplinarias. Las plazas corresponden a carreras específicas.",
+    requisitos: "Estar matriculado en una carrera de la UNI y haber cursado al menos el 40% de la carrera. No ocupar un cargo docente ni contar con sanciones disciplinarias. Presentar certificado de estudios, constancia de estudios con promedio y de no penalización, currículum vitae con documentos respaldatorios y copia de cédula de identidad. Completar el formulario de postulación y describir la motivación para participar.",
+    beneficios: "Experiencia académica internacional durante un semestre presencial en una universidad de destino, con reconocimiento de la movilidad según el programa correspondiente. La UNI cubre el traslado y el seguro de vida; la universidad de destino cubre el alojamiento y la alimentación.",
+    costo: "La convocatoria contempla cobertura de traslado, seguro de vida, alojamiento y alimentación. Los gastos de documentación migratoria quedan a cargo del estudiante.",
+    modalidad: "Presencial",
+    ubicacion: "Universidades de destino en Argentina y Bolivia, según la carrera y la plaza asignada.",
+    fechaLimite: "23 de octubre de 2026",
+    fechaLimiteISO: "2026-10-23",
+    descripcion: "La Universidad Nacional de Itapúa abre la convocatoria REC/RRII N.º 04/2026, en el marco de los programas ESCALA de Estudiantes de Grado de AUGM y ZICOSUR Universitario. Se ofrecen 9 plazas para cursar el primer semestre académico de 2027 en universidades de Argentina y Bolivia. Las plazas están distribuidas entre Medicina, Ingeniería Civil, Administración, Ciencias de la Educación, Derecho, Ingeniería Agronómica e Informática Empresarial. La selección considera el perfil académico, la carta de motivación, la participación institucional y otros criterios establecidos en las bases. Es indispensable revisar la distribución de plazas y confirmar que la carrera del postulante esté habilitada.",
+    enlace: "https://derecho.uni.edu.py/wp-content/uploads/2026/10/Convocatoria-RRII-N%C2%B0-04_2026.pdf"
+},
+
 ];
